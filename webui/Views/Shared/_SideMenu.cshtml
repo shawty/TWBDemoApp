@@ -1,0 +1,14 @@
+﻿@{
+  using (var nav = Html.Bootstrap().Begin(new Nav().Style(NavType.List).Stacked().SetLinksActiveByController()))
+  {
+    @nav.Header("Main Menu")
+    @nav.ActionLink("Home", "Index", "Home").PrependIcon(Icons.home)
+    @nav.ActionLink("Scaffolding", "Index", "Scaffolding").PrependIcon(Icons.align_center)
+    @nav.ActionLink("Base CSS", "Index", "Basecss").PrependIcon(Icons.italic)
+    @nav.ActionLink("Forms", "Index", "Forms").PrependIcon(Icons.list)
+    @nav.ActionLink("Buttons", "Index", "Buttons").PrependIcon(Icons.share)
+    @nav.ActionLink("Components", "Index", "Components").PrependIcon(Icons.info_sign)
+    @nav.ActionLink("TBMVC", "Index", "Tbmvc").PrependIcon(Icons.heart)
+
+  }
+}
