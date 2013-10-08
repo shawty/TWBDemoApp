@@ -1,0 +1,144 @@
+﻿@{
+  ViewBag.Title = "Bootstrap Sample Site | Alignment and Emphasis";
+}
+
+<div class="page-header">
+  <h1>Base CSS <small>Alignment and Emphasis</small></h1>
+</div>
+
+<p>
+  There are many classes in Twitter Bootstrap for highlighting, colouring, aligning and other effects.  You already seen the "code" ones in the previous section. (More on those further down)
+</p>
+
+<p>
+  Many of the effects you would use day to day however don't require classes at all.  All of the standard html elements are styled to use the Bootstrap look and feel as the basic typography
+  page on the TWB site shows.
+</p>
+
+<pre>
+  &lt;h1&gt;Heading 1&lt;/h1&gt;
+  &lt;h2&gt;Heading 2&lt;/h2&gt;
+  &lt;h3&gt;Heading 3&lt;/h3&gt;
+  &lt;h4&gt;Heading 4&lt;/h4&gt;
+  &lt;h5&gt;Heading 5&lt;/h5&gt;
+  &lt;h6&gt;Heading 6&lt;/h6&gt;
+</pre>
+
+will produce the following:
+
+<h1>Heading 1</h1>
+<h2>Heading 2</h2>
+<h3>Heading 3</h3>
+<h4>Heading 4</h4>
+<h5>Heading 5</h5>
+<h6>Heading 6</h6>
+
+<p>
+  Normal body copy as you've already seen is achived with a standard &lt;p&gt; tag. The global font size for all base text is 14 pixels with a line height of 20 pixels, a standard paragraph
+  tag also has a bottom margin that is scaled to be half of the standard line height, 10 pixels in the case of default sizing.
+</p>
+
+<p>
+  As far as emphasis classes go, you've already seen the &lt;small&gt; class in action on the page headers, but this html tag in general is also styled to allow you do de-emphasise text
+  in general, and it's very subtle:
+</p>
+
+<hr/>
+
+<p>This is a sample paragraph with some de-emphasized text in it, <small>Can you spot where</small> the de-emphasized text is?</p>
+
+<pre>
+  &lt;p&gt;This is a sample paragraph with some de-emphasized text in it, &lt;small&gt;Can you spot where&lt;/small&gt; the de-emphasized text is?&lt;/p&gt;
+</pre>
+
+<hr/>
+
+<p>
+  Bold and itallics likewise are achived simply by using &lt;strong&gt; for bold and &lt;em&gt; for italics as follows:
+</p>
+
+<p>
+  <strong>This text is in BOLD</strong>
+</p>
+
+<p>
+  <em>This text is in ITALICS</em>
+</p>
+
+<pre>
+  &lt;p&gt;
+    &lt;strong&gt;This text is in BOLD&lt;/strong&gt;
+  &lt;/p&gt;
+
+  &lt;p&gt;
+    &lt;em&gt;This text is in ITALICS&lt;/em&gt;
+  &lt;/p&gt;
+</pre>
+
+<hr/>
+
+<p>
+  Twitter Bootstrap also provides classes to allow you to easily apply specific colour sets to your text.  These colours can be changed by doing a customised download using the TWB website
+  and changing the options available.  A standard download however provides five emphasis colours as follows:
+</p>
+
+<p class="muted"><strong>muted</strong> - This is muted text, designed for disabled controls, or items that are not in anyway important.</p>
+<p class="text-warning"><strong>text-warning</strong> - This is WARNING text, usually yellow and is designed for text that informs the user of a potentially damaging situation that needs to be treat with caution.</p>
+<p class="text-error"><strong>text-error</strong> - This is ERROR text usually red and is designed to draw the users attention to an error or other damaging situation that would normaly require immediate attention.</p>
+<p class="text-info"><strong>text-info</strong> - This is INFO text, usually in a blue colour it's purpose is to inform the user of some situation that they need to be aware of but that will not result in any problems if ignored.</p>
+<p class="text-success"><strong>text-success</strong> - This is SUCCESS text, usually green in colour, it's purpose is to let the user know an action worked or that they have a green light to go ahead with something.</p>
+
+<pre>
+  &lt;p class="muted"&gt;...&lt;/p&gt;
+  &lt;p class="text-warning"&gt;...&lt;/p&gt;
+  &lt;p class="text-error"&gt;...&lt;/p&gt;
+  &lt;p class="text-info"&gt;...&lt;/p&gt;
+  &lt;p class="text-success"&gt;...&lt;/p&gt;
+</pre>
+
+<hr/>
+
+<p>
+  You'll find through out Twitter Bootstrap that this theme of 4/5 basic colours is used in manu other places too, allowing you to create a very consistient and good looking user interface.
+</p>
+
+<p>
+  I mentioned erlier that there where also classes available for highlighting code.  If you wrap your code in a standard &lt;pre&gt; tag, any code you put between the tags will as
+  expected retain it's formatting, and will appear in a well as you've seen in the code examples provided above.
+</p>
+
+<p>
+  There is also a secondary &lt;code&gt; tag that is provided for those times where you might want to put code inline with your usual text flow, for example:
+</p>
+
+<p>
+  This is some normal paragraph text that has some <code>&lt;code&gt;Inline HTML code&lt;/code&gt;</code> inside of it
+</p>
+
+<p>
+  <strong>NOTE: </strong> don't be tempted to use &lt;code&gt; for formatting multi line code blocks, if you do you'll need to transform all your line breaks yourself and you'll need to 
+   override most of the formatting yourself.  It's far easier to use &lt;pre&gt; and add any custom formats in your own CSS file that you include after including Twitter Bootstrap.
+</p>
+
+<hr/>
+
+<p>
+  The final part to cover in this section is the alignment classes.  TWB provides a number of classes that make alignment of regular text extremely easy.  Classes are provided for left, center and right alignment
+  and can be applied to pretty much any regular html element in your pages as the following example shows:
+</p>
+
+<h1 class="text-left">Left Header 1</h1>
+<h1 class="text-center">Center Header 1</h1>
+<h1 class="text-right">Right Header 1</h1>
+<p class="text-left">Left Paragraph</p>
+<p class="text-center">Center Paragraph</p>
+<p class="text-right">Right Paragraph</p>
+
+<pre>
+  &lt;h1 class="text-left"&gt;Left Header 1&lt;/h1&gt;
+  &lt;h1 class="text-center"&gt;Center Header 1&lt;/h1&gt;
+  &lt;h1 class="text-right"&gt;Right Header 1&lt;/h1&gt;
+  &lt;p class="text-left"&gt;Left Paragraph&lt;/p&gt;
+  &lt;p class="text-center"&gt;Center Paragraph&lt;/p&gt;
+  &lt;p class="text-right"&gt;Right Paragraph&lt;/p&gt;
+</pre>

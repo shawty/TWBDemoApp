@@ -1,0 +1,168 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Lists";
+}
+
+<div class="page-header">
+  <h1>Base CSS <small>Lists</small></h1>
+</div>
+
+<p>
+  Twitter bootstrap provides six different types of lists, all based around the standard html &lt;ul&gt; and related elements. 
+</p>
+
+<p>
+  Starting with a regular &lt;ul&gt; list type, we get the following.
+</p>
+
+<ul>
+  <li>First Level Item 1</li>
+  <li>First Level Item 2</li>
+  <li>First Level Item 3</li>
+  <ul>
+    <li>Second Level Item 1</li>
+    <li>Second Level Item 2</li>
+    <li>Second Level Item 3</li>
+  </ul>
+  <li>First Level Item 4</li>
+  <li>First Level Item 5</li>
+  <li>First Level Item 6</li>
+</ul>
+
+<pre>
+  &lt;ul&gt;
+    &lt;li&gt;First Level Item 1&lt;/li&gt;
+    &lt;li&gt;First Level Item 2&lt;/li&gt;
+    &lt;li&gt;First Level Item 3&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Second Level Item 1&lt;/li&gt;
+      &lt;li&gt;Second Level Item 2&lt;/li&gt;
+      &lt;li&gt;Second Level Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;li&gt;First Level Item 4&lt;/li&gt;
+    &lt;li&gt;First Level Item 5&lt;/li&gt;
+    &lt;li&gt;First Level Item 6&lt;/li&gt;
+  &lt;/ul&gt;
+</pre>
+
+<p>
+  Which will give us the standard styling as we would expect.
+</p>
+
+<p>
+  By adding the <code>class="unstyled"</code> class to our parent &lt;ul&gt; we can remove the the dot/numbers/icons used to bullet the list.  Note however that this works only for the current &lt;ul&gt; it does 
+  not descend through parent lists as the following example shows:
+</p>
+
+<ul class="unstyled">
+  <li>First Level Item 1</li>
+  <li>First Level Item 2</li>
+  <li>First Level Item 3</li>
+  <ul>
+    <li>Second Level Item 1</li>
+    <li>Second Level Item 2</li>
+    <li>Second Level Item 3</li>
+  </ul>
+  <li>First Level Item 4</li>
+  <li>First Level Item 5</li>
+  <li>First Level Item 6</li>
+</ul>
+
+<pre>
+  &lt;ul class="unstyled"&gt;
+    &lt;li&gt;First Level Item 1&lt;/li&gt;
+    &lt;li&gt;First Level Item 2&lt;/li&gt;
+    &lt;li&gt;First Level Item 3&lt;/li&gt;
+    &lt;ul&gt;
+      &lt;li&gt;Second Level Item 1&lt;/li&gt;
+      &lt;li&gt;Second Level Item 2&lt;/li&gt;
+      &lt;li&gt;Second Level Item 3&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;li&gt;First Level Item 4&lt;/li&gt;
+    &lt;li&gt;First Level Item 5&lt;/li&gt;
+    &lt;li&gt;First Level Item 6&lt;/li&gt;
+  &lt;/ul&gt;
+</pre>
+
+<p>
+  The next type of list is our old friend the ordered list, the only difference here is we use an &gt;ol&lt; element rather than an &lt;ul&gt; element to create the list, 
+  as would be expected, the list will be prefixed with numbers in descending sequence rather than just a simple bullet point.
+</p>
+
+<p>
+  Following on from the above 3 list types, we can also apply a <code>class="inline"</code> to either of the above list types to turn them into an inline list like the following:
+</p>
+
+<ul class="inline">
+  <li>Item 1</li>
+  <li>Item 2</li>
+  <li>Item 3</li>
+  <li>Item 4</li>
+  <li>Item 5</li>
+  <li>Item 6</li>
+</ul>
+
+<pre>
+  &lt;ul class="inline"&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+    &lt;li&gt;Item 3&lt;/li&gt;
+    &lt;li&gt;Item 4&lt;/li&gt;
+    &lt;li&gt;Item 5&lt;/li&gt;
+    &lt;li&gt;Item 6&lt;/li&gt;
+  &lt;/ul&gt;
+</pre>
+
+<p>
+  Inline lists are designed to aid you in the construction of menus and other horizontal navigation structures.
+</p>
+
+<p>
+  The remaining 2 list types that Twitter Bootstrap has support for are the newer "definition" list type.  These are created using the standard &lt;dl&gt; html tags along with
+  &lt;dt&gt; and &lt;dd&gt; to define the items.  A standard definition list is constructed as follows:
+</p>
+
+<dl>
+  <dt>Definition Title 1</dt>
+  <dd>Definition 1</dd>
+  <dt>Definition Title 2</dt>
+  <dd>Definition 2</dd>
+  <dt>Definition Title 3</dt>
+  <dd>Definition 3</dd>
+</dl>
+
+<pre>
+  &lt;dl&gt;
+    &lt;dt&gt;Definition Title 1&lt;/dt&gt;
+    &lt;dd&gt;Definition 1&lt;/dd&gt;
+    &lt;dt&gt;Definition Title 2&lt;/dt&gt;
+    &lt;dd&gt;Definition 2&lt;/dd&gt;
+    &lt;dt&gt;Definition Title 3&lt;/dt&gt;
+    &lt;dd&gt;Definition 3&lt;/dd&gt;
+  &lt;/dl&gt;
+</pre>
+
+<p>
+  Adding the class <code>class="dl-horizontal"</code> to your definition list will give you the 6th type of list that Twitter Bootstrap supports, and that's the horizontally 
+  aligned definition titles on the left with the definitions on the right.
+</p>
+
+<dl class="dl-horizontal">
+  <dt>Definition Title 1</dt>
+  <dd>Definition 1</dd>
+  <dt>Definition Title 2</dt>
+  <dd>Definition 2</dd>
+  <dt>Definition Title 3</dt>
+  <dd>Definition 3</dd>
+</dl>
+
+<pre>
+  &lt;dl class="dl-horizontal"&gt;
+    &lt;dt&gt;Definition Title 1&lt;/dt&gt;
+    &lt;dd&gt;Definition 1&lt;/dd&gt;
+    &lt;dt&gt;Definition Title 2&lt;/dt&gt;
+    &lt;dd&gt;Definition 2&lt;/dd&gt;
+    &lt;dt&gt;Definition Title 3&lt;/dt&gt;
+    &lt;dd&gt;Definition 3&lt;/dd&gt;
+  &lt;/dl&gt;
+</pre>
+

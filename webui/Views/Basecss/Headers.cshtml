@@ -1,0 +1,47 @@
+﻿@{
+  ViewBag.Title = "Bootstrap Sample Site | Lead body copy and headers";
+}
+
+<div class="page-header">
+  <h1>Base CSS <small>Lead body copy and headers</small></h1>
+</div>
+
+<p>Lets first start with the page headers component, there's nothing special about this.</p>
+<p>A lot of Twitter Bootstraps elements and layouts are nothing more than simple amalgamations of common components and html elements, in this case for the header you can see 
+  above (and on the other pages, it's simply a &lt;div&gt; tag with a class of "page-header" inside this div we then use a standard &lt;h1&gt; tag for the main text and 
+  &lt;small&gt; tags for the smaller grey sub-text.</p>
+  
+<p>To create the header above takes nothing more than the following html code:</p>
+<pre>
+  &lt;div class="page-header"&gt;
+    &lt;h1&gt;Base CSS &lt;small&gt;Lead body copy and headers&lt;/small&gt;&lt;/h1&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>Lead body copy is something else that is often needed especially on text heavy sites, it opens your documentation and provides focus for the text the user is about to read.</p>
+<p>Look at the following example:</p>
+
+<hr/>
+
+<h3>Lead body copy example</h3>
+<p class="lead">
+  This is our lead paragraph, as you can see it's more prominent than the other paragraphs we are viewing in this document. You can see that it's bolder and stands out more than
+  the other paragraphs, but is still easy to read and flows nicely with the rest of the document.
+</p>
+<p>
+  This second paragraph however is now just a normal paragraph, with no special mark up, everything just flows nicely and evenly into the document flow. If this was a blog or similar
+  you layout would be quite pleasing to the eye, and we've only used 2 classes and a handfull of normal html so far.
+</p>
+
+<hr/>
+
+<p>
+  The code required to create a lead body paragraph consists of using a &lt;h3&gt; tag for the title (this is not required) and then simply using a standard &lt;p&gt; tag with the
+  CSS class of "lead" applied to it, as follows:
+</p>
+
+<pre>
+  &lt;h3&gt;Lead body copy example&lt;/h3&gt;
+  &lt;p class="lead"&gt;...&lt;/p&gt;
+  &lt;p&gt;...&lt;/p&gt;
+</pre>

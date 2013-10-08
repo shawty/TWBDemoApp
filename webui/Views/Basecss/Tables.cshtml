@@ -1,0 +1,294 @@
+﻿@using webui.Models
+@model List<PersonViewModel>
+@{
+    ViewBag.Title = "Bootstrap Sample Site | Tables";
+}
+
+<div class="page-header">
+  <h1>Base CSS <small>Tables</small></h1>
+</div>
+
+<p>
+  If there's one thing that Twitter Bootstrap provides exceptional (IMHO anyway :-) ) support for, and that's tables.  Out of everything available at the web developers 
+  aresenal tables are probably the one thing that no one, devs or designers alike, enjoy styling.
+</p>
+
+<p>
+  A basic table is created using a standard table structure with the <code>class="table"</code> class added to it, this will produce the following:
+</p>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Surname</th>
+      <th>EMail</th>
+      <th>Age</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var person in Model)
+    {
+      <tr>
+        <td>@person.FirstName</td>
+        <td>@person.Surname</td>
+        <td>@person.EMail</td>
+        <td>@person.Age</td>
+        <td>@person.Salary</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<pre>
+  &lt;table class="table"&gt;
+    &lt;thead&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+</pre>
+
+<p>
+  Once you have a basic table defined there are then optional classes you can add to your table class list to provide extra visual effects.
+</p>
+
+<p>
+  If you want to stripe the table rows simply add <code>class="table-striped"</code> to the classes already in the table tag
+</p>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Surname</th>
+      <th>EMail</th>
+      <th>Age</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var person in Model)
+    {
+      <tr>
+        <td>@person.FirstName</td>
+        <td>@person.Surname</td>
+        <td>@person.EMail</td>
+        <td>@person.Age</td>
+        <td>@person.Salary</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<pre>
+  &lt;table class="table table-striped"&gt;
+    &lt;thead&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+</pre>
+
+<p>
+  If you want to a full border simply add <code>class="table-bordered"</code> to the classes already in the table tag
+</p>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Surname</th>
+      <th>EMail</th>
+      <th>Age</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var person in Model)
+    {
+      <tr>
+        <td>@person.FirstName</td>
+        <td>@person.Surname</td>
+        <td>@person.EMail</td>
+        <td>@person.Age</td>
+        <td>@person.Salary</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<pre>
+  &lt;table class="table table-striped"&gt;
+    &lt;thead&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+</pre>
+
+<p>
+  While adding <code>class="table-hover"</code> to the classes already in the table tag will make your rows change as you hover over them
+</p>
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Surname</th>
+      <th>EMail</th>
+      <th>Age</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var person in Model)
+    {
+      <tr>
+        <td>@person.FirstName</td>
+        <td>@person.Surname</td>
+        <td>@person.EMail</td>
+        <td>@person.Age</td>
+        <td>@person.Salary</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<pre>
+  &lt;table class="table table-hover"&gt;
+    &lt;thead&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+</pre>
+
+<p>
+  Finally you can condense the white space by cutting the cell padding in half using <code>class="table-condensed"</code> to the classes so that your table takes up a bit less space
+</p>
+
+<table class="table table-condensed">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Surname</th>
+      <th>EMail</th>
+      <th>Age</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var person in Model)
+    {
+      <tr>
+        <td>@person.FirstName</td>
+        <td>@person.Surname</td>
+        <td>@person.EMail</td>
+        <td>@person.Age</td>
+        <td>@person.Salary</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<pre>
+  &lt;table class="table table-condensed"&gt;
+    &lt;thead&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+</pre>
+
+<p>
+  and of course as they are combined classes you can add them all at the same time if you need to
+</p>
+
+<table class="table table-condensed table-bordered table-striped table-hover">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Surname</th>
+      <th>EMail</th>
+      <th>Age</th>
+      <th>Salary</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var person in Model)
+    {
+      <tr>
+        <td>@person.FirstName</td>
+        <td>@person.Surname</td>
+        <td>@person.EMail</td>
+        <td>@person.Age</td>
+        <td>@person.Salary</td>
+      </tr>
+    }
+  </tbody>
+</table>
+
+<pre>
+  &lt;table class="table table-condensed table-bordered table-striped table-hover"&gt;
+    &lt;thead&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+</pre>
+
+<p>
+  If you remember from the alignment and emphasis section we had a set of 4 colours that could be applied to text, well those 4 colours crop up again in the table classes allowing you to 
+  style your table rows in a similar manner.  The style names and colours are the same as those in the other section, so I'll skip the descriptions and just apply them to our table.
+</p>
+
+@{
+  string[] rowClasses = new string[] {"success", "error", "warning", "info"};
+  int classesCounter = 0;
+}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>First Name</th>
+      <th>Surname</th>
+      <th>EMail</th>
+      <th>Age</th>
+      <th>Salary</th>
+      <th>Class name</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var person in Model)
+    {
+      <tr class="@rowClasses[classesCounter]">
+        <td>@person.FirstName</td>
+        <td>@person.Surname</td>
+        <td>@person.EMail</td>
+        <td>@person.Age</td>
+        <td>@person.Salary</td>
+        <td>@rowClasses[classesCounter]</td>
+      </tr>
+      classesCounter++;
+      if (classesCounter > (rowClasses.Length - 1))
+      {
+        classesCounter = 0;
+      }
+    }
+  </tbody>
+</table>
+
+<pre>
+  &lt;table class="table"&gt;
+    &lt;thead&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr class="success"&gt;...&lt;/tr&gt;
+      &lt;tr class="error"&gt;...&lt;/tr&gt;
+      &lt;tr class="warning"&gt;...&lt;/tr&gt;
+      &lt;tr class="info"&gt;...&lt;/tr&gt;
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+</pre>

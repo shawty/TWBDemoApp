@@ -1,0 +1,99 @@
+﻿@{
+  ViewBag.Title = "Bootstrap Sample Site | Abbreviations, Addresses and Blockquotes";
+}
+
+<div class="page-header">
+  <h1>Base CSS <small>Abbreviations, Addresses and Blockquotes</small></h1>
+</div>
+
+<p>
+  Formatting of inline abbreviations is not something that's difficult to do, but getting them to catch the users attention can sometimes be a bit of a challenge.  Twitter Bootstrap
+  makes it as easy as adding a class to a &lt;abbr&gt; tag surrounding your abbreviated text, TWB will automatically style it to flow with the rest of your text while still making it
+  obvious that there is a reason that text is special.  Like other classes it also works with most html elements
+</p>
+
+<h3>This is some header text all about <abbr title="Hypertext Mark Up Language">HTML</abbr> in Twitter Bootstrap</h3>
+<p><abbr title="Twitter Bootstrap">TWB</abbr> is a fantastic client side <abbr title="JavaScript">JS</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> framework for making great <abbr title="User Interfaces">UI's</abbr></p>
+
+<p>
+  You set the text to be displayed in the &lt;abbr&gt; tag by setting it's <code>title="..."</code> attribute to the text you want to display when the user hovers over the abbreviation. 
+  you can also add the optional <code>class="initialism"</code> to your tag, which will give it a slightly smaller font size.
+</p>
+
+<pre>
+  &lt;h3&gt;
+    This is some header text all about &lt;abbr title="Hypertext Mark Up Language"&gt;HTML&lt;/abbr&gt; in Twitter Bootstrap
+  &lt;/h3&gt;
+  &lt;p&gt;
+    &lt;abbr title="Twitter Bootstrap"&gt;TWB&lt;/abbr&gt;
+    is a fantastic client side
+    &lt;abbr title="JavaScript"&gt;JS&lt;/abbr&gt;
+    and &lt;abbr title="Cascading Style Sheets"&gt;CSS&lt;/abbr&gt;
+    framework for making great &lt;abbr title="User Interfaces"&gt;UI's&lt;/abbr&gt;
+  &lt;/p&gt;
+</pre>
+
+<hr/>
+
+<p>
+  Formatting and address and contact details is equally as easy, for this you use the &lt;address&gt; html tag with &lt;br/&gt; tags to break each line as the following example shows:
+</p>
+
+<address>
+  <strong>Digital Solutions UK.</strong><br>
+  123 A street, Suite 600<br>
+  A Town, A County<br>
+  <abbr title="Phone">P:</abbr> (123) 456-7890
+</address>
+ 
+<address>
+  <strong>Peter Shaw</strong><br>
+  <a href="mailto:#">peter.shaw@digital-solutions.me.uk</a>
+</address>
+
+<pre>
+
+  &lt;address&gt;
+    &lt;strong&gt;Digital Solutions UK.&lt;/strong&gt;&lt;br&gt;
+    123 A street, Suite 600&lt;br&gt;
+    A Town, A County&lt;br&gt;
+    &lt;abbr title="Phone"&gt;P:&lt;/abbr&gt; (123) 456-7890
+  &lt;/address&gt;
+ 
+  &lt;address&gt;
+    &lt;strong&gt;Peter Shaw&lt;/strong&gt;&lt;br&gt;
+    &lt;a href="mailto:#"&gt;peter.shaw@digital-solutions.me.uk&lt;/a&gt;
+  &lt;/address&gt;
+
+</pre>
+
+<p>
+  The effect may not be immediate and many of you might be thinking I can do that easily using what I've seen so far, using the &lt;address&gt; element has an advantage though, and that
+  is the new semantic layout model used by HTML5.  In future the major search engines will start to take notice of things like this in order to show your companys contact details in 
+  search listings.  Semantic layout and micro-formats are going to become increasingly important in tomorrows world of interconnected web applications and some sites such as Google 
+  are already starting to index and take advantage of constructs like this found in the sites they index.
+</p>
+
+<hr/>
+
+<p>
+  The last part of this section is blockquotes.  For those of you who don't know what blockquotes are, they are the small snippets of text often seen in books and on sites where the author 
+  quotes someone's famous words, or displays a marketing quote.  Consider the following example:
+</p>
+
+<blockquote>
+  <p>I Think there is a worldwide market for maybe five computers.</p>
+  <p><small>IBM President Thomas J. Watson</small></p>
+</blockquote>
+
+<pre>
+  &lt;blockquote&gt;
+    &lt;p&gt;I Think there is a worldwide market for maybe five computers.&lt;/p&gt;
+    &lt;p&gt;&lt;small&gt;IBM President Thomas J. Watson&lt;/small&gt;&lt;/p&gt;
+  &lt;/blockquote&gt;
+</pre>
+
+<p>
+  Like the &lt;address&gt; tag, &lt;blockquote&gt; is a new tag in HTML5 and like the other tags, Twitter Bootstrap provides out of the box styling for it.  To create your blockquote 
+  all you simply need to do is wrap your regular HTML content inside a set of &lt;blockquote&gt; html elements.
+</p>
