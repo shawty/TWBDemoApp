@@ -1,0 +1,132 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Form control groups";
+}
+
+<div class="page-header">
+  <h1>Forms <small>control groups and validation states</small></h1>
+</div>
+
+<p>
+  As you saw in the previous section, the horizontal form type used control groups to to group the controls together so they could be laid out horizontally.  Control groups are important in 
+  Twitter Bootstrap forms as they allow an entire form row to be manipulated as one entity.  This is especially important with input elements such as check boxes and radio buttons 
+  where its classically quite difficult to line up labels correctly with the control.
+</p>
+
+<p>
+  In fact, in TWB in order to line up the labels for check boxes and radios you actually need to create the element inside a control group using the <code>control-group</code> class 
+  then you actually need to apply a class of <code>checkbox</code> or <code>radio</code> to the label, before then placing the actual checkbox control inside the label element, as the following shows:
+</p>
+
+<form>
+  <div class="control-group">
+    <div class="controls">
+      <label class="checkbox">
+        <input type="checkbox"> I am a check box.
+      </label>
+    </div>
+  </div>
+
+  <div class="control-group">
+    <div class="controls">
+      <label class="radio">
+        <input type="radio"> I am a radio button.
+      </label>
+    </div>
+  </div>
+
+</form>
+
+<pre>
+  &lt;form&gt;
+    &lt;div class="control-group"&gt;
+      &lt;div class="controls"&gt;
+        &lt;label class="checkbox"&gt;
+          &lt;input type="checkbox"&gt; I am a check box.
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+
+    &lt;div class="control-group"&gt;
+      &lt;div class="controls"&gt;
+        &lt;label class="radio"&gt;
+          &lt;input type="radio"&gt; I am a radio button.
+        &lt;/label&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+</pre>
+
+<p>
+  Control groups have one rather important use, and that's to wrap up all the controls involved in a single action for the purposes of applying validation states.  Like the previous examples of setting 
+  colours on table rows and text, the validation states also use the 4 base colours and state names to show the state of a validation on a form row, as the folowing example shows:
+</p>
+
+<form>
+  <div class="control-group warning">
+    <label class="control-label" for="text1">Input Element 1</label>
+    <div class="controls">
+      <input type="text" id="text1" placeholder="Some Text">
+      <span class="help-inline"><strong>Warning</strong> - Validation Message</span>
+    </div>
+  </div>
+  <div class="control-group error">
+    <label class="control-label" for="text2">Input Element 2</label>
+    <div class="controls">
+      <input type="text" id="text2" placeholder="Some Text">
+      <span class="help-inline"><strong>Error</strong> - Validation Message</span>
+    </div>
+  </div>
+  <div class="control-group info">
+    <label class="control-label" for="text3">Input Element 3</label>
+    <div class="controls">
+      <input type="text" id="text3" placeholder="Some Text">
+      <span class="help-inline"><strong>Info</strong> - Validation Message</span>
+    </div>
+  </div>
+  <div class="control-group success">
+    <label class="control-label" for="text4">Input Element 4</label>
+    <div class="controls">
+      <input type="text" id="text4" placeholder="Some Text">
+      <span class="help-inline"><strong>Success</strong> - Validation Message</span>
+    </div>
+  </div>
+</form>
+
+<pre>
+  &lt;form&gt;
+    &lt;div class="control-group warning"&gt;
+      &lt;label class="control-label" for="text1"&gt;Input Element 1&lt;/label&gt;
+      &lt;div class="controls"&gt;
+        &lt;input type="text" id="text1" placeholder="Some Text"&gt;
+        &lt;span class="help-inline"&gt;&lt;strong&gt;Warning&lt;/strong&gt; - Validation Message&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="control-group error"&gt;
+      &lt;label class="control-label" for="text2"&gt;Input Element 2&lt;/label&gt;
+      &lt;div class="controls"&gt;
+        &lt;input type="text" id="text2" placeholder="Some Text"&gt;
+        &lt;span class="help-inline"&gt;&lt;strong&gt;Error&lt;/strong&gt; - Validation Message&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="control-group info"&gt;
+      &lt;label class="control-label" for="text3"&gt;Input Element 3&lt;/label&gt;
+      &lt;div class="controls"&gt;
+        &lt;input type="text" id="text3" placeholder="Some Text"&gt;
+        &lt;span class="help-inline"&gt;&lt;strong&gt;Info&lt;/strong&gt; - Validation Message&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="control-group success"&gt;
+      &lt;label class="control-label" for="text4"&gt;Input Element 4&lt;/label&gt;
+      &lt;div class="controls"&gt;
+        &lt;input type="text" id="text4" placeholder="Some Text"&gt;
+        &lt;span class="help-inline"&gt;&lt;strong&gt;Success&lt;/strong&gt; - Validation Message&lt;/span&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+</pre>
+
+<p>
+  As you can see you can set the validation state to one of the four main states simply just by setting the state on parent control group.  You should also be able to see the newly added 
+  <code>help-inline</code> spans.  This class along with its cousin <code>help-block</code> is used to provide helpful text to go inside your control group, generally this text is used for validation messages.
+</p>
+

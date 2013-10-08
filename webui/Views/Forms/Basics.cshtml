@@ -1,0 +1,99 @@
+﻿@using webui.Classes
+@model webui.Models.PersonViewModel
+@{
+    ViewBag.Title = "Bootstrap Sample Site | Forms basics";
+}
+
+<div class="page-header">
+  <h1>Forms <small>the basics</small></h1>
+</div>
+
+<p>
+  Producing a form in Twitter Bootstrap is no different to the way you do it any other time. TWB provides support for all the native (and new) form elements, and in most 
+  cases you can just use them without adding any extra classes or anything, the following example was created using the normal ASP.NET MVC html helpers for creating forms
+</p>
+
+@using(Html.BeginForm("Basics", "Forms"))
+{
+  <fieldset>
+    <legend>Person Details</legend>
+    
+    @Html.LabelFor(m => m.FirstName)
+    @Html.TextBoxFor(m => m.FirstName)
+    
+    @Html.LabelFor(m => m.Surname)
+    @Html.TextBoxFor(m => m.Surname)
+    
+    @Html.LabelFor(m => m.EMail)
+    @Html.TextBoxFor(m => m.EMail)
+    
+    @Html.LabelFor(m => m.Age)
+    @Html.TextBoxFor(m => m.Age)
+    
+    @Html.LabelFor(m => m.Salary)
+    @Html.TextBoxFor(m => m.Salary)
+    
+  </fieldset>
+}
+
+<pre>
+
+  @@using(Html.BeginForm("Basics", "Forms"))
+  {
+    &lt;fieldset&gt;
+      &lt;legend&gt;Person Details&lt;/legend&gt;
+    
+      @@Html.LabelFor(m => m.FirstName)
+      @@Html.TextBoxFor(m => m.FirstName)
+    
+      @@Html.LabelFor(m => m.Surname)
+      @@Html.TextBoxFor(m => m.Surname)
+    
+      @@Html.LabelFor(m => m.EMail)
+      @@Html.TextBoxFor(m => m.EMail)
+    
+      @@Html.LabelFor(m => m.Age)
+      @@Html.TextBoxFor(m => m.Age)
+    
+      @@Html.LabelFor(m => m.Salary)
+      @@Html.TextBoxFor(m => m.Salary)
+    
+    &lt;/fieldset&gt;
+  }
+
+</pre>
+
+<p>
+  Using standard MVC form helpers without any special treatment or classes will produce a good looking, well laid out form, as we shall see in other sections however we can do much more.
+</p>
+
+<p>
+  As well as just standard forms, you can also provide spans that arer styled to look like inputs, but are used for uneditable elements, or input fields that just display values:
+</p>
+
+<span class="uneditable-input">Some uneditable value here</span>
+
+<pre>
+  &lt;span class="uneditable-input"&gt;Some uneditable value here&lt;/span&gt;
+</pre>
+
+<p>
+  You create this uneditable input type simply by adding the class <code>uneditable-input</code> to a span surrounding the value you wish to display.
+</p>
+
+<p>
+  One final basic class that you can use, which is often used in modal dialog boxes, is the <code>form-actions</code> class.  This class lines your buttons up with any form 
+  elements in the above form (Especially if using control groups) but also shades the background slightly to make it clear the area has special significance.
+</p>
+
+<div class="form-actions">
+  <button type="submit" class="btn">Save changes</button>
+  <button type="button" class="btn">Cancel</button>
+</div>
+
+<pre>
+  &lt;div class="form-actions"&gt;
+    &lt;button type="submit" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+    &lt;button type="button" class="btn"&gt;Cancel&lt;/button&gt;
+  &lt;/div&gt;
+</pre>

@@ -1,0 +1,109 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Special Forms";
+}
+
+<div class="page-header">
+  <h1>Forms <small>special form types</small></h1>
+</div>
+
+<p>
+  Twitter Bootstrap has a number of form types straight out of the box, the purpose of which is to provide ready to go common layouts, the first of these is the "Search Form" which is 
+  created by using 2 CSS classes and a standard form as follows:
+</p>
+
+<form class="form-search">
+  <input type="text" class="input-medium search-query">
+  <button type="submit" class="btn">Search</button>
+</form>
+
+<pre>
+  &lt;form class="form-search"&gt;
+    &lt;input type="text" class="input-medium search-query"&gt;
+    &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+  &lt;/form&gt;
+</pre>
+
+<p>
+  The primary use of this form is for the search field inside a nav bar, ut it can be used anywhere any form can be used.  Note also that I've created this with pure HTML and not the 
+  ASP.NET MVC html helpers, you can if you wish however use begin form and co for this too, you just need to make sure that you inject the correct class names of <code>form-search</code> 
+  into the form element itself, and <code>search-query</code> onto the input element that will accept your search criteria.
+</p>
+
+<hr/>
+
+<p>
+  The next pre made form type is the "Inline Form" and like the search form type, its created by adding a single class of <code>form-inline</code> to the html form tag, nothing else needs to be 
+  added to the elements inside the form, these can be constructed as normal with no special classes needing to be added.
+</p>
+
+<form class="form-inline">
+  <input type="text" class="input-small" placeholder="Email">
+  <input type="password" class="input-small" placeholder="Password">
+  <button type="submit" class="btn">Sign in</button>
+</form>
+
+<pre>
+  &lt;form class="form-inline"&gt;
+    &lt;input type="text" class="input-small" placeholder="Email"&gt;
+    &lt;input type="password" class="input-small" placeholder="Password"&gt;
+    &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+  &lt;/form&gt;
+</pre>
+
+<p>
+  As with the search form the primary use of this is to place forms inside the nav bars and other horizontal layout components that TWB provides, but equally it can be placed anywhere that a form can be created.
+</p>
+
+<hr/>
+
+<p>
+  The last of the pre made special form types is the horizontal form, the idea behind this type of form is to line up buttons and input elements with labels on the left in a format that's 
+  commonly seen in dialog boxes.  Setting up a horizontal form is a little more involved than with the other two types as controls need to be wrapped in a specific way which we'll see 
+  more of in the next section, for now however the main key is like the other two, the addition of a CSS class to the form tag itself, in this case <code>form-horizontal</code>
+</p>
+
+<form class="form-horizontal">
+  <div class="control-group">
+    <label class="control-label" for="inputEmail">Email</label>
+    <div class="controls">
+      <input type="text" id="inputEmail" placeholder="Email">
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label" for="inputPassword">Password</label>
+    <div class="controls">
+      <input type="password" id="inputPassword" placeholder="Password">
+    </div>
+  </div>
+  <div class="control-group">
+    <div class="controls">
+      <button type="submit" class="btn">Sign in</button>
+    </div>
+  </div>
+</form>
+
+<pre>
+  &lt;form class="form-horizontal"&gt;
+    &lt;div class="control-group"&gt;
+      &lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
+      &lt;div class="controls"&gt;
+        &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="control-group"&gt;
+      &lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
+      &lt;div class="controls"&gt;
+        &lt;input type="password" id="inputPassword" placeholder="Password"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class="control-group"&gt;
+      &lt;div class="controls"&gt;
+        &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+</pre>
+
+<p>
+  As you can see above, the sign in button is lined up with our input controls, and spacing is provided for the labels to line them all up neatly.
+</p>

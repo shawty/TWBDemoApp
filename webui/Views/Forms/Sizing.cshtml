@@ -1,0 +1,105 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Forms element sizing";
+}
+
+<div class="page-header">
+  <h1>Forms <small>input element sizing</small></h1>
+</div>
+
+<p>
+  Controls in the Twitter Bootstrap classes can be easily sized by using one of the pre-made fixed size classes, this is refered to i the documentation as relitive sizing
+</p>
+
+<form class="form-horizontal">
+  <div class="control-group"><label class="control-label">input-mini</label><div class="controls"><input class="input-mini" type="text" placeholder=".input-mini"></div></div>
+  <div class="control-group"><label class="control-label">input-small</label><div class="controls"><input class="input-small" type="text" placeholder=".input-small"></div></div>
+  <div class="control-group"><label class="control-label">input-medium</label><div class="controls"><input class="input-medium" type="text" placeholder=".input-medium"></div></div>
+  <div class="control-group"><label class="control-label">input-large</label><div class="controls"><input class="input-large" type="text" placeholder=".input-large"></div></div>
+  <div class="control-group"><label class="control-label">input-xlarge</label><div class="controls"><input class="input-xlarge" type="text" placeholder=".input-xlarge"></div></div>
+  <div class="control-group"><label class="control-label">input-xxlarge</label><div class="controls"><input class="input-xxlarge" type="text" placeholder=".input-xxlarge"></div></div>
+</form>
+
+<pre>
+  &lt;form class="form-horizontal"&gt;
+    &lt;div class="control-group"&gt;&lt;label class="control-label"&gt;input-mini&lt;/label&gt;&lt;div class="controls"&gt;&lt;input class="input-mini" type="text" placeholder=".input-mini"&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="control-group"&gt;&lt;label class="control-label"&gt;input-small&lt;/label&gt;&lt;div class="controls"&gt;&lt;input class="input-small" type="text" placeholder=".input-small"&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="control-group"&gt;&lt;label class="control-label"&gt;input-medium&lt;/label&gt;&lt;div class="controls"&gt;&lt;input class="input-medium" type="text" placeholder=".input-medium"&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="control-group"&gt;&lt;label class="control-label"&gt;input-large&lt;/label&gt;&lt;div class="controls"&gt;&lt;input class="input-large" type="text" placeholder=".input-large"&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="control-group"&gt;&lt;label class="control-label"&gt;input-xlarge&lt;/label&gt;&lt;div class="controls"&gt;&lt;input class="input-xlarge" type="text" placeholder=".input-xlarge"&gt;&lt;/div&gt;&lt;/div&gt;
+    &lt;div class="control-group"&gt;&lt;label class="control-label"&gt;input-xxlarge&lt;/label&gt;&lt;div class="controls"&gt;&lt;input class="input-xxlarge" type="text" placeholder=".input-xxlarge"&gt;&lt;/div&gt;&lt;/div&gt;
+  &lt;/form&gt;
+</pre>
+
+<p>
+  You can also force your element to block element type behaviour so that it consumes all the space in it's parent container (Handy for dialogs with custom layouts)
+</p>
+
+<form class="form-horizontal">
+  <div class="control-group"><label class="control-label">input-block-level</label><div class="controls"><input class="input-block-level" type="text" placeholder=".input-block-level"></div></div>
+</form>
+
+<pre>
+  &lt;form class="form-horizontal"&gt;
+    &lt;div class="control-group"&gt;
+      &lt;label class="control-label"&gt;input-mini&lt;/label&gt;
+      &lt;div class="controls"&gt;
+        &lt;input class="input-block-level" type="text" placeholder=".input-block-level"&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+</pre>
+
+<p>
+  This works particularly well if your using the scaffolding classes on parent spans to lay your page out.
+</p>
+
+<hr/>
+
+<p>
+  The scaffolding classes as they stand can also be used directly on the input elements.  Doing things in this manner allows you to precisely control the layout of your form elements. 
+</p>
+
+<input class="span1" type="text" placeholder=".span1"><br/>
+<input class="span2" type="text" placeholder=".span2"><br/>
+<input class="span3" type="text" placeholder=".span3"><br/>
+<select class="span1"><br/>
+  <option>Span 1</option>
+  <option>Span 2</option>
+  <option>Span 3</option>
+</select>
+<select class="span2"><br/>
+  <option>Span 2</option>
+  <option>Span 1</option>
+  <option>Span 3</option>
+</select>
+<select class="span3"><br/>
+  <option>Span 3</option>
+  <option>Span 2</option>
+  <option>Span 1</option>
+</select>
+
+<pre>
+  &lt;input class="span1" type="text" placeholder=".span1"&gt;&lt;br/&gt;
+  &lt;input class="span2" type="text" placeholder=".span2"&gt;&lt;br/&gt;
+  &lt;input class="span3" type="text" placeholder=".span3"&gt;&lt;br/&gt;
+  &lt;select class="span1"&gt;&lt;br/&gt;
+    &lt;option&gt;Span 1&lt;/option&gt;
+    &lt;option&gt;Span 2&lt;/option&gt;
+    &lt;option&gt;Span 3&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;select class="span2"&gt;&lt;br/&gt;
+    &lt;option&gt;Span 2&lt;/option&gt;
+    &lt;option&gt;Span 1&lt;/option&gt;
+    &lt;option&gt;Span 3&lt;/option&gt;
+  &lt;/select&gt;
+  &lt;select class="span3"&gt;&lt;br/&gt;
+    &lt;option&gt;Span 3&lt;/option&gt;
+    &lt;option&gt;Span 2&lt;/option&gt;
+    &lt;option&gt;Span 1&lt;/option&gt;
+  &lt;/select&gt;
+</pre>
+
+<p>
+  <strong>NOTE</strong> - to get the propper layout and spacing, you'll need to wrap in control groups and proper form elements where needed, I've not done that in this case.  Please also 
+  be aware that you'll need to add the class <code>controls-row</code> to most of the divs where you have <code>controls</code> added as this will collapse whitespace and clear any floats used to align things, esp in the case of a horizontal form.
+</p>

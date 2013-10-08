@@ -219,6 +219,21 @@
   <ItemGroup>
     <Content Include="Views\Basecss\Tables.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Forms\Basics.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Forms\Special.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Forms\Controlgroups.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Forms\Support.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Forms\Sizing.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

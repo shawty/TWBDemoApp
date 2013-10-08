@@ -1,0 +1,130 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Form control support";
+}
+
+<div class="page-header">
+  <h1>Forms <small>element support</small></h1>
+</div>
+
+<p>
+  Majority of all the HTML input types (including all the new HTML5 ones) are fully supported by Twitter Bootstrap, I say majority rather than all for one reason, File upload inputs.
+</p>
+
+<p>
+  If anyone reading this has ever tried to style a file upload component they'll know exactly what I mean.  In fact it's such an awkward thing to achieve that I even wrote a full blog 
+  post on it a few years back (Which you can find here : http://shawtyds.wordpress.com/2010/08/08/single-button-ajax-file-uploads-using-jquery/ ) 
+</p>
+
+<p>
+  Unfortunately Twitter Bootstrap is no exception.  There is no styling or layouts provided for our humble file upload component.
+</p>
+
+<p>
+  Fortunately the developer community being what it is, several people have stepped in to fill the void.  The two following extension UI kits for TWB are additions that should be in any TWB 
+  users tool kit.
+</p>
+
+<ul>
+  <li><a href="http://jasny.github.io/bootstrap/index.html" target="_blank"><strong>Jasny Bootstrap</strong> - a completley extended version of Bootstrap with many new features.</a></li>
+  <li><a href="http://exacttarget.github.io/fuelux/" target="_blank"><strong>Fuel UX</strong> - a UI extension kit that you load alongside the original Bootstrap files.</a></li>
+</ul>
+
+<p>
+  Both of these kits IMHO offer tremendous additional value to an already fantastic kit, and like Bootstrap itself both are open source and free to use.
+</p>
+
+<p>
+  As for the actual types supported, the below list shows each of the input types supported by bootstrap, please remember however that actual input support does still vary from 
+  browser to browser.
+</p>
+
+<form>
+  <div class="control-group">
+    <label class="control-label">Text Input</label>
+    <div class="controls">
+      <input type="text" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Search Input (Normal text but deepley rounderd with a small magnifying icon)</label>
+    <div class="controls">
+      <input type="search" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Email Input (Plain text with email validation)</label>
+    <div class="controls">
+      <input type="email" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Url Input (Plain text with url validation)</label>
+    <div class="controls">
+      <input type="url" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Telephone Input</label>
+    <div class="controls">
+      <input type="tel" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Number Input</label>
+    <div class="controls">
+      <input type="number" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Range Input</label>
+    <div class="controls">
+      <input type="range" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Date Input</label>
+    <div class="controls">
+      <input type="date" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Month Input</label>
+    <div class="controls">
+      <input type="month" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Week Input</label>
+    <div class="controls">
+      <input type="week" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Time Input</label>
+    <div class="controls">
+      <input type="time" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Datetime Input</label>
+    <div class="controls">
+      <input type="datetime" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Datetime local Input</label>
+    <div class="controls">
+      <input type="datetime-local" />
+    </div>
+  </div>
+  <div class="control-group">
+    <label class="control-label">Colour Input</label>
+    <div class="controls">
+      <input type="color" />
+    </div>
+  </div>
+</form>
+
+<p>
+  If you try entering data into the different types, you'll notice that if the validation is going to fail in browsers that support it, Twitter Bootstrap will actually colour the border of the control in it's default error colour.
+</p>
