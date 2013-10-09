@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Form control extending";
+}
+
+<div class="page-header">
+  <h1>Forms <small>control extending</small></h1>
+</div>
+
+<p>
+  Bootstrap has one more interesting trick up its sleeve when it comes to forms and that's the ability to add all manner of custom furniture to your 
+  input elements.  For example if an input field is designed to accept some ones twitter handle, rather than use a label to place an '@@' sign in 
+  front of your text box, you can actually pre-pend the symbol directly onto the input field itself as the following example shows:
+</p>
+
+<div class="input-prepend">
+  <span class="add-on">@@</span>
+  <input class="span8" id="twitterName" type="text" placeholder="Twitter Handle" />
+</div>
+
+<pre>
+  &lt;div class="input-prepend"&gt;
+    &lt;span class="add-on"&gt;@@&lt;/span&gt;
+    &lt;input class="span8" id="twitterName" type="text" placeholder="Twitter Handle" /&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>
+  We do this by first creating an outer div element, that has a clas of <code>input-prepend</code> applied to it.  Then within that div we place 
+  the text to pre-pend to the element inside a span with a class of <code>add-on</code> applied.  The input element itself needs no special treatment and 
+  can be sized/styled with normal classes from the scaffolding and/or other form related classes available.
+</p>
+
+<p>
+  We can also append text items in the same way, for example if we wanted to display two 0's for a number display, the only difference is we use the 
+  class <code>input-append</code> on the parent div and place the span after the input element as the following shows:
+</p>
+
+<div class="input-append">
+  <input class="span8" id="valueAmount" type="text" placeholder="Amount" />
+  <span class="add-on">.00</span>
+</div>
+
+<pre>
+  &lt;div class="input-append"&gt;
+    &lt;input class="span8" id="valueAmount" type="text" placeholder="Amount" /&gt;
+    &lt;span class="add-on"&gt;.00&lt;/span&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>
+  You can even combine them by using both classes on the parent div and add somthing on both sides if you need too:
+</p>
+
+<div class="input-prepend input-append">
+  <span class="add-on">£</span>
+  <input class="span8" id="valueAmount" type="text" placeholder="Amount" />
+  <span class="add-on">.00</span>
+</div>
+
+<pre>
+  &lt;div class="input-prepend input-append"&gt;
+    &lt;span class="add-on"&gt;£&lt;/span&gt;
+    &lt;input class="span8" id="valueAmount" type="text" placeholder="Amount" /&gt;
+    &lt;span class="add-on"&gt;.00&lt;/span&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>
+  Anything you can add in a span can be used as a prepend or append item, but you can also use a straight &lt;button&gt; or &lt;a&gt; tag and apply one of 
+  the button classes to it to append or prepend a button to your control, if your adding buttons and using the <code>btn</code> class you don't need to use <code>add-on</code> 
+  as the button class will apply any extra styling needed.
+</p>
+
+<div class="input-append">
+  <input class="span8" id="userName" type="text" placeholder="User Name" />
+  <button class="btn">Check Name</button>
+</div>
+
+<pre>
+  &lt;div class="input-append"&gt;
+    &lt;input class="span8" id="userName" type="text" placeholder="User Name" /&gt;
+    &lt;button class="btn"&gt;.00&lt;/button&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>
+  You can apply multiple buttons simply by adding multiple button tags, you can also add buttons with drop down menus, button groups and split dropdown 
+  buttons.  Finally if you define your form using the search form special class show previously, your appended or prepended button will take on the same 
+  shape as the search field.
+</p>
+
+<form class="form-search">
+  <div class="input-append">
+    <input type="text" class="span8 search-query" />
+    <button type="submit" class="btn">Search</button>
+  </div>
+</form>
+
+<pre>
+  &lt;form class="form-search"&gt;
+    &lt;div class="input-append"&gt;
+      &lt;input type="text" class="span8 search-query" /&gt;
+      &lt;button type="submit" class="btn"&gt;Search&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/form&gt;
+</pre>
