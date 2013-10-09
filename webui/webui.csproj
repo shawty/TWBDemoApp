@@ -243,6 +243,18 @@
   <ItemGroup>
     <Content Include="Views\Forms\Extending.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Buttons\Styles.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Buttons\Icons.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Buttons\Sizing.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Buttons\Groups.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

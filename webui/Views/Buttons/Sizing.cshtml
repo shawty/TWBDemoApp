@@ -1,0 +1,73 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Button sizes";
+}
+
+<div class="page-header">
+  <h1>Buttons <small>sizing classes</small></h1>
+</div>
+
+<p>
+  Just as with the different styles, there are also different sizes that can be added using optional classes too.
+</p>
+
+<p>
+  There are currently 4 different sizes of button <code>btn-large</code> , <code>btn-small</code> , <code>btn-mini</code> and the default size which you get by simply just applying 
+  the standard <code>btn</code> class to your element:
+</p>
+
+<div class="spacedDiv"><a href="#" class="btn btn-large">Large Button</a></div>
+<div class="spacedDiv"><a href="#" class="btn">Default Button</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-small">Small Button</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-mini">Mini Button</a></div>
+<br/>
+
+<pre>
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-large"&gt;Large Button&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn"&gt;Default Button&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-small"&gt;Small Button&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-mini"&gt;Mini Button&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<p>
+  In-line with the other classes, these classes can also be added along side any of the style classes too.
+</p>
+
+<div class="spacedDiv"><a href="#" class="btn btn-info btn-large">Large Button</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-info">Default Button</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-info btn-small">Small Button</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-info btn-mini">Mini Button</a></div>
+<br/>
+
+<pre>
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-info btn-large"&gt;Large Button&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-info"&gt;Default Button&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-info btn-small"&gt;Small Button&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-info btn-mini"&gt;Mini Button&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<p>
+  Just as with the input types in general, there's one more class that can be used to help you side your buttons, and that's the <code>btn-block</code> class, which makes your button 
+  consume all the block level space available in it's parent container.
+</p>
+
+<a href="#" class="btn btn-block">Block Level Default Button</a>
+<a href="#" class="btn btn-block btn-primary">Block Level Primary Button</a>
+<a href="#" class="btn btn-block btn-success">Block Level Success Button</a>
+<br/>
+
+<pre>
+  &lt;a href="#" class="btn btn-block"&gt;Block Level Default Button&lt;/a&gt;
+  &lt;a href="#" class="btn btn-block btn-primary"&gt;Block Level Primary Button&lt;/a&gt;
+  &lt;a href="#" class="btn btn-block btn-success"&gt;Block Level Success Button&lt;/a&gt;
+</pre>
+
+<p>
+  Iv'e found a good use for block level buttons is actually in creating button based vertical menus.
+</p>
+
+@section UserCss
+{
+  <style>
+    .spacedDiv {padding: 4px;}
+  </style>
+}

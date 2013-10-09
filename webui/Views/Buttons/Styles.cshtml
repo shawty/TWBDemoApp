@@ -1,0 +1,75 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Button styles";
+}
+
+<div class="page-header">
+  <h1>Buttons <small>different styles available</small></h1>
+</div>
+
+<p>
+  Keeping in common witht he various 4 base colours we've seen throughout Twitter Bootstrap so far, you wouldn't be surprised to see that these 4 base colours are also available when it comes 
+  to buttons too.  However there are also a few more too.  To turn any element into a button it's as simple as addint the <code>btn</code> class to that element, typically however you would 
+  usually only add the button class to either a &lt;button&gt; or &lt;a&gt; tag.
+</p>
+
+<p>
+  There are 8 different styles, as shown below.
+</p>
+
+<div class="spacedDiv"><a href="#" class="btn">Default Style</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-primary">Primary Style</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-info">Info Style</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-success">Success Style</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-warning">Warning Style</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-danger">Danger Style</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-inverse">Inverse Style</a></div>
+<div class="spacedDiv"><a href="#" class="btn btn-link">Link Style</a></div>
+
+<pre>
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn"&gt;Default Style&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-primary"&gt;Primary Style&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-info"&gt;Info Style&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-success"&gt;Success Style&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-warning"&gt;Warning Style&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-danger"&gt;Danger Style&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-inverse"&gt;Inverse Style&lt;/a&gt;&lt;/div&gt;
+  &lt;div class="spacedDiv"&gt;&lt;a href="#" class="btn btn-link"&gt;Link Style&lt;/a&gt;&lt;/div&gt;
+</pre>
+
+<p>
+  All button types except for the default, require the <code>btn</code> class, plus the optional extra style class to change them to that button, note also that the link button may seem 
+  redundant (That is, it looks the same as just a normal &lt;a&gt; tag is styled) but it's actually set up so that it maintains all the behaviour of a button element.  What this means in 
+  practice, is that you can use it just as a normal &lt;a&gt; tag would be used in an ASP.NET grid link control, but you can set it's type to be an actual &lt;button&gt; rather than an &lt;a&gt; 
+  thus removing the fear of an action on a grid row being triggered by a web spider or other page crawler. 
+</p>
+
+<p>
+  <strong>NOTE</strong> as is noted in the TWB documentation, IE9 doesn't crop background gradients on rounded corners, so if your displaying styled buttons in IE9 the graduated background is removed.
+</p>
+
+<p>
+  Finally, if you want to give your button a disabled look, then simply add the <code>disabled</code> class to it, along side the other classes already present on each control.
+</p>
+
+<div class="spacedDiv"><a href="#" class="disabled btn">Default Style</a></div>
+<div class="spacedDiv"><a href="#" class="disabled btn btn-primary">Primary Style</a></div>
+<div class="spacedDiv"><a href="#" class="disabled btn btn-info">Info Style</a></div>
+<div class="spacedDiv"><a href="#" class="disabled btn btn-success">Success Style</a></div>
+<div class="spacedDiv"><a href="#" class="disabled btn btn-warning">Warning Style</a></div>
+<div class="spacedDiv"><a href="#" class="disabled btn btn-danger">Danger Style</a></div>
+<div class="spacedDiv"><a href="#" class="disabled btn btn-inverse">Inverse Style</a></div>
+<div class="spacedDiv"><a href="#" class="disabled btn btn-link">Link Style</a></div>
+
+<p>
+  Two more things to be aware of this time, you'll note that the "button" still has it's active state and can still be clicked on, in order to prevent this working you'll need 
+  to put a spot of JavaScript on it's event handler to prevent it being triggered or calling it's click handler, the disabled state simply gives a disabled appearence, it does not 
+  actually disable the button.  Also (Another IE9 specific issue) disabled buttons in IE9 get a rather ugly grey fringe around the text when disabled, this is something the 
+  Twitter Bootstrap team know about, but as of yet have no idea how to fix it.  Personally, I've never seen this grey fringe however.
+</p>
+
+@section UserCss
+{
+  <style>
+    .spacedDiv {padding: 4px;}
+  </style>
+}
