@@ -258,6 +258,12 @@
   <ItemGroup>
     <Content Include="Views\Buttons\Dropdowns.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Components\Tabs.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Components\Navs.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

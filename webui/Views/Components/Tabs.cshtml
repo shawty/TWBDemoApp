@@ -1,0 +1,226 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Tabs and Pills";
+}
+
+<div class="page-header">
+  <h1>Components <small>Tabs and Pills</small></h1>
+</div>
+
+<p>
+  Twitter Bootstrap has by far one of the largest collections of navigation related components I've seen in any UI kit I've used.  All of them use the save base <code>nav</code> class 
+  with various combinations of classes to produce a great many different ways to add navigation to your sites.
+</p>
+
+<p>
+  To kick this off, I'll introduce you to Tab strips & Pills.  A basic Tab strip is created by using a &lt;ul&gt; element with a class of <code>nav-tabs</code> placed along side a normal <code>nav</code> 
+  class, inside this &lt;ul&gt; we then create a normal set of &lt;li&gt; tags which we wrap a series of &lt;a&gt; tags in as you might normally expect for a standard menu layout, to finish things off 
+  we then add a <code>data-toggle="tab"</code> custom attribute to each anchor tag so that it knows how to switch tabs.  Optionally if you add 
+  the <code>active</code> class to any of the &lt;li&gt; tags within that list, that element in the tab set will be marked as the active tab as the following shows:
+</p>
+
+<ul class="nav nav-tabs">
+  <li class="active">
+    <a href="#" data-toggle="tab">Tab 1</a>
+  </li>
+  <li><a href="#" data-toggle="tab">Tab 2</a></li>
+  <li><a href="#" data-toggle="tab">Tab 3</a></li>
+  <li><a href="#" data-toggle="tab">Tab 4</a></li>
+</ul>
+
+<pre>
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="active"&gt;
+      &lt;a href="#"&gt;Tab 1&lt;/a&gt;
+    &lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Tab 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Tab 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Tab 4&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<p>
+  If you try this example you might be surprised to find that only the tab changes when you click on things.  This is beacuse in it's basic form like this, you are responsible for changing the tab 
+  contents in any page area and setting things up to produce a different view.  If you want TWB to manage the tabs and content for you, you need to do a little more work.
+</p>
+
+<p>
+  To make your tab list work as you would expect and actually change content rather than just tab styles you first need to mark up your tab list as previously described:
+</p>
+
+<pre>
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;li&gt;&lt;a href="#home" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#profile" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#messages" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#settings" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+</pre>
+
+<p>
+  Following on from that, you then need to mark up a series of &lt;div&gt; elements to hold the contents of your tabs, you need to start these with an outer &lt;div&gt; element marked 
+  with a class of <code>tab-content</code> then within that outer &lt;div&gt; you need a series of further &lt;div&gt; elements marked up with a class of <code>tab-pane</code> and optionaly 
+  a class of <code>active</code> for the pane that is to be the active one
+</p>
+
+<p>
+  Note that the href attributes in each of the anchor tags in your &lt;ul&gt; must match the id attribute prefixed with a # symbol in each of the tab pane divs, it's this linkage that allows 
+  the tab set to know which tab page to change too when it's clicked, if you add the class <code>fade</code> to your tab panes, your tab content will also use a little fade animation when changing.
+</p>
+
+<pre>
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="home"&gt;Home Content&lt;/div&gt;
+    &lt;div class="tab-pane" id="profile"&gt;Profile Content&lt;/div&gt;
+    &lt;div class="tab-pane" id="messages"&gt;Messages Content&lt;/div&gt;
+    &lt;div class="tab-pane" id="settings"&gt;Settings Content&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>
+  If you do this correctly, and put it all together, you should get the following:
+</p>
+
+<ul class="nav nav-tabs" id="myTab">
+  <li class="active"><a href="#home" data-toggle="tab">Home</a></li>
+  <li><a href="#profile" data-toggle="tab">Profile</a></li>
+  <li><a href="#messages" data-toggle="tab">Messages</a></li>
+  <li><a href="#settings" data-toggle="tab">Settings</a></li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane active fade" id="home"><strong>Home Content</strong></div>
+  <div class="tab-pane fade" id="profile"><strong>Profile Content</strong></div>
+  <div class="tab-pane fade" id="messages"><strong>Messages Content</strong></div>
+  <div class="tab-pane fade" id="settings"><strong>Settings Content</strong></div>
+</div>
+<br/><br/>
+
+<p>
+  To use pills as your navigation system is not much different, you mark your html list up in exactly the same way, but you use <code>nav-pill</code> rather than <code>nav-tab</code> as the
+  extra class to set the nav type.
+</p>
+
+<ul class="nav nav-pills">
+  <li class="active">
+    <a href="#" data-toggle="tab">Pill 1</a>
+  </li>
+  <li><a href="#" data-toggle="tab">Pill 2</a></li>
+  <li><a href="#" data-toggle="tab">Pill 3</a></li>
+  <li><a href="#" data-toggle="tab">Pill 4</a></li>
+</ul>
+
+<pre>
+  &lt;ul class="nav nav-pills"&gt;
+    &lt;li class="active"&gt;
+      &lt;a href="#" data-toggle="tab"&gt;Pill 1&lt;/a&gt;
+    &lt;li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="tab"&gt;Pill 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="tab"&gt;Pill 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#" data-toggle="tab"&gt;Pill 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+</pre>
+
+<p>
+  and just as with the tab's navigation, you can mark your divs up in the same way and use pills to switch them.
+</p>
+
+<ul class="nav nav-pills" id="myPills">
+  <li class="active"><a href="#homepill" data-toggle="tab">Home</a></li>
+  <li><a href="#profilepill" data-toggle="tab">Profile</a></li>
+  <li><a href="#messagespill" data-toggle="tab">Messages</a></li>
+  <li><a href="#settingspill" data-toggle="tab">Settings</a></li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane active" id="homepill"><strong>Home Pill Content</strong></div>
+  <div class="tab-pane" id="profilepill"><strong>Profile Pill Content</strong></div>
+  <div class="tab-pane" id="messagespill"><strong>Messages Pill Content</strong></div>
+  <div class="tab-pane" id="settingspill"><strong>Settings Pill Content</strong></div>
+</div>
+<br/><br/>
+
+<pre>
+  &lt;ul class="nav nav-pills" id="myPills"&gt;
+    &lt;li class="active"&gt;&lt;a href="#homepill" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#profilepill" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#messagespill" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#settingspill" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="homepill"&gt;Home Pill Content&lt;/div&gt;
+    &lt;div class="tab-pane" id="profilepill"&gt;Profile Pill Content&lt;/div&gt;
+    &lt;div class="tab-pane" id="messagespill"&gt;Messages Pill Content&lt;/div&gt;
+    &lt;div class="tab-pane" id="settingspill"&gt;Settings Pill Content&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>
+  You also have the ability to "stack" your tabs & pills, you can do this by simply adding the class <code>nav-stacked</code> to the 2 classes already 
+  applied to your navs &lt;ul&gt; structure as the following shows:
+</p>
+
+<ul class="nav nav-tabs nav-stacked" id="myTab2">
+  <li class="active"><a href="#home2" data-toggle="tab">Home</a></li>
+  <li><a href="#profile2" data-toggle="tab">Profile</a></li>
+  <li><a href="#messages2" data-toggle="tab">Messages</a></li>
+  <li><a href="#settings2" data-toggle="tab">Settings</a></li>
+</ul>
+<div class="tab-content">
+  <div class="tab-pane active" id="home2"><strong>Home Content</strong></div>
+  <div class="tab-pane" id="profile2"><strong>Profile Content</strong></div>
+  <div class="tab-pane" id="messages2"><strong>Messages Content</strong></div>
+  <div class="tab-pane" id="settings2"><strong>Settings Content</strong></div>
+</div>
+<br/><br/>
+
+<pre>
+  &lt;ul class="nav nav-tabs nav-stacked" id="myTab2"&gt;
+    &lt;li class="active"&gt;&lt;a href="#home2" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#profile2" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#messages2" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#settings2" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="home2"&gt;&lt;strong&gt;Home Content&lt;/strong&gt;&lt;/div&gt;
+    &lt;div class="tab-pane" id="profile2"&gt;&lt;strong&gt;Profile Content&lt;/strong&gt;&lt;/div&gt;
+    &lt;div class="tab-pane" id="messages2"&gt;&lt;strong&gt;Messages Content&lt;/strong&gt;&lt;/div&gt;
+    &lt;div class="tab-pane" id="settings2"&gt;&lt;strong&gt;Settings Content&lt;/strong&gt;&lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>
+  Finally, you can make your tabs/pills appear on ANY side of the content you want to simply by wrapping the entire &lt;ul&gt; and &lt;div&gt; structure in one more &lt;div&gt; and applying 
+  the class <code>tabbable</code> followed by one of, <code>tabs-below</code> , <code>tabs-left</code> or <code>tabs-right</code>
+</p>
+
+<br/>
+
+<div class="tabbable tabs-left">
+  <ul class="nav nav-tabs" id="myTab3">
+    <li class="active"><a href="#home3" data-toggle="tab">Home</a></li>
+    <li><a href="#profile3" data-toggle="tab">Profile</a></li>
+    <li><a href="#messages3" data-toggle="tab">Messages</a></li>
+    <li><a href="#settings3" data-toggle="tab">Settings</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="home3"><strong>Home Content</strong></div>
+    <div class="tab-pane" id="profile3"><strong>Profile Content</strong></div>
+    <div class="tab-pane" id="messages3"><strong>Messages Content</strong></div>
+    <div class="tab-pane" id="settings3"><strong>Settings Content</strong></div>
+  </div>
+</div>
+
+<pre>
+&lt;div class="tabbable tabs-left"&gt;
+  &lt;ul class="nav nav-tabs" id="myTab3"&gt;
+    &lt;li class="active"&gt;&lt;a href="#home3" data-toggle="tab"&gt;Home&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#profile3" data-toggle="tab"&gt;Profile&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#messages3" data-toggle="tab"&gt;Messages&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#settings3" data-toggle="tab"&gt;Settings&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="home3"&gt;&lt;strong&gt;Home Content&lt;/strong&gt;&lt;/div&gt;
+    &lt;div class="tab-pane" id="profile3"&gt;&lt;strong&gt;Profile Content&lt;/strong&gt;&lt;/div&gt;
+    &lt;div class="tab-pane" id="messages3"&gt;&lt;strong&gt;Messages Content&lt;/strong&gt;&lt;/div&gt;
+    &lt;div class="tab-pane" id="settings3"&gt;&lt;strong&gt;Settings Content&lt;/strong&gt;&lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>

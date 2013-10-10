@@ -1,0 +1,65 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Navigation lists and bars";
+}
+
+<div class="page-header">
+  <h1>Components <small>Navigation Lists & Bars</small></h1>
+</div>
+
+<p>
+  As well as tabs and pills, Twitter Bootstrap also includes some very rich navigation lists & bars components, specifically designed for creating top navigation menus on your site, and side bar 
+  navigation systems (Such as the one to the left of this content).  The side lists in particular can be broken up with headers and dividers to make multi level menu structures easily.
+</p>
+
+<p>
+  You create a nav list in much the same way you create either a tab or pill bar, by creating a &lt;ul&gt; and applying the classes <code>nav</code> and <code>nav-list</code> to them 
+  as the following shows.
+</p>
+
+<ul class="nav nav-list">
+  <li class="active"><a href="#">Home</a></li>
+  <li><a href="#">Settings</a></li>
+  <li><a href="#">Profile</a></li>
+  <li><a href="#">Messages</a></li>
+</ul>
+<br/>
+
+<p>
+  As you'll see above a nav list is a block level structure, so it will expand width ways to fill it's container, you can however wasily control it using a span class on a &lt;div&gt; element 
+  as you saw previously in the section on scaffolding:
+</p>
+<br/>
+
+<div class="span12">
+  <div class="span2">
+    <ul class="nav nav-list">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Messages</a></li>
+    </ul>
+  </div>
+</div>
+
+<p>
+  As I mentioned, you can add headers by using the <code>nav-header</code> class on an &lt;li&gt; element, and you can also create dividers by using the <code>divider</code> class:
+</p>
+
+<div class="span12">
+  <div class="span2">
+    <ul class="nav nav-list">
+      <li class="nav-header">Main Menu</li>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">Settings</a></li>
+      <li><a href="#">Profile</a></li>
+      <li><a href="#">Messages</a></li>
+      <li class="nav-header">Applications</li>
+      <li><a href="#">Painting</a></li>
+      <li><a href="#">Drawing</a></li>
+      <li class="divider"></li>
+      <li><a href="#">Word processing</a></li>
+      <li><a href="#">Presentations</a></li>
+    </ul>
+  </div>
+</div>
+
