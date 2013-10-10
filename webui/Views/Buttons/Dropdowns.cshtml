@@ -1,0 +1,159 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Drop dows and split buttons";
+}
+
+<div class="page-header">
+  <h1>Buttons <small>drop downs and split buttons</small></h1>
+</div>
+
+<p>
+  The last thing in Twitter Bootstraps button classes is the ability to create 2 kinds of drop down buttons.  The first type is just a simple button with a drop down menu attached, the 
+  second type is a split button.  A split button is a button thats half a regular button, and half a drop down button.
+</p>
+
+<p>
+  To create a single drop down is one of the more involved of things available in Twitter Bootstrap, you need to construct quite a bit of HTML in quite a specific order to create 
+  them.  
+</p>
+
+<div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Action
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+    <li><a href="#">Menu 4</a></li>
+  </ul>
+</div>
+<br/><br/>
+
+<pre>
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    Action
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+  The first thing you need to do is wrap your controls in a div with a class of <code>btn-group</code> even if you only have one button.  You then need to create the
+  actual button definition with any styles and sizing you need, before adding a class of <code>dropdown-toggle</code>.  Your button also needs a data-toggle attribute 
+  of <code>dropdown</code> adding to it so that it's JavaScript features are enabled.  Once you've done this, you then need to wrap any content for your button in 
+  your &lt;button&gt; or &lt;a&gt; element along with a caret if required as shown in the sample code above.
+</p>
+
+<p>
+  The final part is to immediately follow your closing tag with a &lt;ul&gt; element that has the class <code>dropdown-menu</code> applied to it, and a set of &lt;li&gt; 
+  tags holding your menu links.
+</p>
+
+<p>
+  If your putting more than one button next to each other, you must put each individual button in it's own button group div, unlike regular button groups you cannot 
+  group drop downs together, if you do then only the last &lt;ul&gt; element in the div will be used by every button in the group.
+</p>
+
+<div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Action
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+    <li><a href="#">Menu 4</a></li>
+  </ul>
+</div>
+<div class="btn-group">
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    Action 2
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Menu 5</a></li>
+    <li><a href="#">Menu 6</a></li>
+    <li><a href="#">Menu 7</a></li>
+    <li><a href="#">Menu 8</a></li>
+  </ul>
+</div>
+<br/><br/>
+
+<pre>
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    Action
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    Action 2
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 5&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 6&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 7&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 8&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+  Split buttons are done in exactly the same way, the only difference is you use 2 button elements before the &lt;ul&gt; tag rather than only one.
+</p>
+
+<div class="btn-group">
+  <a class="btn"> Action</a>
+  <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+    <span class="caret"></span>
+  </a>
+  <ul class="dropdown-menu">
+    <li><a href="#">Menu 1</a></li>
+    <li><a href="#">Menu 2</a></li>
+    <li><a href="#">Menu 3</a></li>
+    <li><a href="#">Menu 4</a></li>
+  </ul>
+</div>
+<br/><br/>
+
+<pre>
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn"&gt; Action&lt;/a&gt;
+  &lt;a class="btn dropdown-toggle" data-toggle="dropdown" href="#"&gt;
+    &lt;span class="caret"&gt;&lt;/span&gt;
+  &lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;Menu 4&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+  When you do this, you get a button that has the textual part act as a normal clickable button would, usually for a default action.  The drop down part drops
+  down a standard drop down menu which for example could have further actions on.
+</p>
+
+<p>
+  From my own use of split buttons, I tend to find them very usefull for adding editing and other options to rows in a data grid.  Often, I make the default 
+  button be edit or similar, then I have options such as delete, and other less used items available on the drop down menu.
+</p>
