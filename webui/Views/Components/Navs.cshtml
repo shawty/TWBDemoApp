@@ -63,3 +63,218 @@
   </div>
 </div>
 
+<p>
+  Once you start to go beyond the navigation list, you get into Twitter Bootstraps support for Navigation Bars and the components to go inside them.  A basic navigation bar looks like this:
+</p>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">My Nav Bar Title</a>
+    <ul class="nav">
+      <li class="active"><a href="#">Menu 1</a></li>
+      <li><a href="#">Menu 2</a></li>
+      <li><a href="#">Menu 3</a></li>
+      <li><a href="#">Menu 4</a></li>
+    </ul>
+  </div>
+</div>
+
+<pre>
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;a class="brand" href="#"&gt;My Nav Bar Title&lt;/a&gt;
+    &lt;ul class="nav"&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;Menu 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Menu 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Menu 4&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+  As with previous navigation components you can see a lot in common.  For a start we have a &lt;ul&gt; with a class of <code>nav</code> applied, we also have 
+  regular anchor tags where the active one is marked with the <code>active</code> class.  Infact the only bit thats really different from previous is the two 
+  extra outer divs with the class <code>navbar</code> and <code>navbar-inner</code>.  The &lt;a&gt; tag with a class of <code>brand</code> is known as a navbar component.
+</p>
+
+<p>
+  TWB has a number of navbar components that you can use, the <code>brand</code> class is used to add branding and a link to your navbar, for example a company 
+  logo or badge in the top right.
+</p>
+
+<p>
+  you can use <code>navbar-form</code> to add a form to your navbar:
+</p>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <form class="navbar-form pull-left">
+      <input type="text" class="span8">
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<pre>
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;form class="navbar-form pull-left"&gt;
+      &lt;input type="text" class="span8"&gt;
+      &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+  Or you can use <code>navbar-search</code> and <code>search-query</code> to create a search form inside the bar:
+</p>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <form class="navbar-search pull-left">
+      <input type="text" class="span8 search-query" />
+      <button type="submit" class="btn">Submit</button>
+    </form>
+  </div>
+</div>
+
+<pre>
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;form class="navbar-search pull-left"&gt;
+      &lt;input type="text" class="span8 search-query" /&gt;
+      &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+  and you can add regular text items by using a <code>navbar-text</code>:
+</p>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <p class="navbar-text">This is some regular text</p>
+  </div>
+</div>
+
+<pre>
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;p class="navbar-text"&gt;This is some regular text&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+  Links are added using the <code>navbar-link</code> class:
+</p>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="navbar-link" href="#">This is a regular link</a>
+  </div>
+</div>
+
+<pre>
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;a class="navbar-link" href="#"&gt;This is a regular link&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+  And drop down menus using the dropdown buttons classes you saw erlier:
+</p>
+
+<div class="navbar">
+  <div class="navbar-inner">
+    <a class="brand" href="#">My Nav Bar Title</a>
+    <ul class="nav">
+      <li class="active"><a href="#">Menu 1</a></li>
+      <li><a href="#">Menu 2</a></li>
+      <li><a href="#">Menu 3</a></li>
+      <li><a href="#">Menu 4</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Account
+          <b class="caret"></b>
+        </a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Sub Menu 1</a></li>
+          <li><a href="#">Sub Menu 2</a></li>
+          <li><a href="#">Sub Menu 3</a></li>
+          <li><a href="#">Sub Menu 4</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<pre>
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;a class="brand" href="#"&gt;My Nav Bar Title&lt;/a&gt;
+    &lt;ul class="nav"&gt;
+      &lt;li class="active"&gt;&lt;a href="#"&gt;Menu 1&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Menu 2&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Menu 3&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href="#"&gt;Menu 4&lt;/a&gt;&lt;/li&gt;
+      &lt;li class="dropdown"&gt;
+        &lt;a href="#" class="dropdown-toggle" data-toggle="dropdown"&gt;Account
+          &lt;b class="caret"&gt;&lt;/b&gt;
+        &lt;/a&gt;
+        &lt;ul class="dropdown-menu"&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Sub Menu 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Sub Menu 2&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Sub Menu 3&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href="#"&gt;Sub Menu 4&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+  There are lot's more optional classes to, such as sticky top to make your navbar glue tot he top of the page, and inverse which swaps the whites for the blacks and vice versa.  I'll leave you
+  to explore those.  Before we move on however, heres how to make a responsive navbar:
+</p>
+
+<pre>
+&lt;div class="navbar"&gt;
+  &lt;div class="navbar-inner"&gt;
+    &lt;div class="container"&gt;
+ 
+      &lt;!-- .btn-navbar is used as the toggle for collapsed navbar content --&gt;
+      &lt;a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+        &lt;span class="icon-bar"&gt;&lt;/span&gt;
+      &lt;/a&gt;
+ 
+      &lt;!-- Be sure to leave the brand out there if you want it shown --&gt;
+      &lt;a class="brand" href="#"&gt;Project name&lt;/a&gt;
+ 
+      &lt;!-- Everything you want hidden at 940px or less, place within here --&gt;
+      &lt;div class="nav-collapse collapse"&gt;
+        &lt;!-- .nav, .navbar-search, .navbar-form, etc --&gt;
+      &lt;/div&gt;
+ 
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+  The above code will display like a normal navbar on full size displays, but as you shrink your display device width (try it by resizing your browser once you 
+  create one) you'll see the bar will transform, until eventually it's just a normal 3 line icon to click on and expand downwards.
+</p>
+
+<p>
+  The navbar classes probably have the greatest scope for experimentation, I've been using Twitter Bootstrap for a year or more now and even I still keep uncovering new things.
+</p>
