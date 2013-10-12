@@ -264,6 +264,9 @@
   <ItemGroup>
     <Content Include="Views\Components\Navs.cshtml" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Components\Labels.cshtml" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

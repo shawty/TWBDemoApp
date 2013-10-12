@@ -17,3 +17,56 @@
   label types are as follows:
 </p>
 
+<p>
+  Lables are defined by applying a class of <code>label-</code> followed by either <code>success</code> , <code>warning</code> , <code>important</code> , <code>info</code> or <code>inverse</code> to it.
+</p>
+
+<ul class="unstyled">
+  <li><span class="label">Default</span></li>
+  <li><span class="label label-success">Success</span></li>
+  <li><span class="label label-warning">Warning</span></li>
+  <li><span class="label label-important">Important</span></li>
+  <li><span class="label label-info">Info</span></li>
+  <li><span class="label label-inverse">Inverse</span></li>
+</ul>
+
+<pre>
+&lt;ul class="unstyled"&gt;
+  &lt;li&gt;&lt;span class="label"&gt;Default&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class="label label-success"&gt;Success&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class="label label-warning"&gt;Warning&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class="label label-important"&gt;Important&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class="label label-info"&gt;Info&lt;/span&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;span class="label label-inverse"&gt;Inverse&lt;/span&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<p>
+  As you can see you have the standard <code>info</code> , <code>success</code> , <code>warning</code> classes for the labels, but in a slight departure from the norm the class for the red colour is actually <code>important</code> and not
+  error as you might expect.  This might seem like a little but of a departure from bein intuitive, but when you think about it, it does make sense as labels are designed to warn you, and not chastise you , unlike a button which might 
+  for example be trying to prevent you from committing an action.  Labels are designed to notify you of the severity of the action.
+</p>
+
+<p>
+  Badges are nothing more than small labels with slightly more rounded corners, the badge states are the same, but the class name is prefixed with <code>badge-</code> instead:
+</p>
+
+<ul class="unstyled">
+  <li><span class="badge">1</span></li>
+  <li><span class="badge badge-success">2</span></li>
+  <li><span class="badge badge-warning">4</span></li>
+  <li><span class="badge badge-important">6</span></li>
+  <li><span class="badge badge-info">8</span></li>
+  <li><span class="badge badge-inverse">10</span></li> 
+</ul>
+
+<pre>
+  &lt;ul class="unstyled"&gt;
+    &lt;li&gt;&lt;span class="badge"&gt;1&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="badge badge-success"&gt;2&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="badge badge-warning"&gt;4&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="badge badge-important"&gt;6&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="badge badge-info"&gt;8&lt;/span&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;&lt;/li&gt; 
+  &lt;/ul&gt;
+</pre>

@@ -1,6 +1,136 @@
 ﻿@{
-    ViewBag.Title = "Bootstrap Sample Site | Scaffolding";
+  ViewBag.Title = "Bootstrap Sample Site | Lead body copy and headers";
 }
 
-<h2>Scaffolding</h2>
+<div class="page-header">
+  <h1>Scaffolding <small>Twitter Bootstraps funky grid system</small></h1>
+</div>
 
+<p>
+  Before you get anywhere with Twitter Bootstrap the first thing you need to understand about TWB is it's grid system.
+</p>
+
+<p>
+  Unlike most frameworks, Twitter Bootstrap makes a lot of sense, it's grid system unlike others uses simple english terms that are not tied to design related 
+  topics, nor are they tied to X and Y positions of elements on a page.  Instead TWB uses terms that most developers, especially anyone familiar with using tables 
+  would be familiar with.
+</p>
+
+<p>
+  Most layouts start with a <code>container</code>
+</p>
+
+<pre>
+  &lt;div class="container"&gt;
+    &lt;p&gt;this is a container class&lt;/p&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>
+  This will create a 980px or 1200px+ layout (depending on screen res) with the content centered on the display.
+</p>
+
+<p>
+  If you want the container to stretch the full width of the display, then swap your <code>container</code> for a <code>container-fluid</code> this will make your 
+  layout take up the entire width of the display, but still have a 12 column grid to play with.
+</p>
+
+<pre>
+  &lt;div class="container-fluid"&gt;
+    &lt;p&gt;this is a container class&lt;/p&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>
+  The default grid in Twitter Bootstrap is 12 Columns, and uses a collection of classes to define your screen space.  If youv'e ever designed using tables then 
+  you'll be right at home with TWB.
+</p>
+
+<p>
+  The <code>row</code> class defines as you might expext a row, by defining rows inside your container, you divide your screens vertical space up, a row always takes 
+  up the full screen width.
+</p>
+
+<div class="container">
+  <div class="row-fluid">
+    <p>this is a container class with a row in</p>
+  </div>
+</div>
+<br/><br/>
+
+<pre>
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;p&gt;this is a container class with a row in&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>
+  The <code>row</code> class also has a <code>row-fluid</code> too, it's purpose is to stretch the entire width of your container, essentially changing 
+  everything to a % based measurment rather than a fixed pixel.
+</p>
+
+<p>
+  Once you define your rows, you then split your screen space up using spans and offsets, the <code>span</code> classes take the number of the column from 
+  1 to 12 eg:
+</p>
+
+<div class="container">
+  <div class="row-fluid">
+    <div class="span4" style="background-color: rgb(156, 156, 240);">
+      <p>this is a container class with a row in, holding a span 4</p>
+    </div>
+    <div class="span4">
+      <p>this is a container class with a row in, holding a span 4</p>
+    </div>
+  </div>
+</div>
+<br/><br/>
+
+<pre>
+  &lt;div class="container"&gt;
+    &lt;div class="row"&gt;
+      &lt;p&gt;this is a container class with a row in&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+</pre>
+
+<p>
+  You can offset columns using the offset classes, which like the span classes take a number from 1 to your column count.
+</p>
+
+<div class="container">
+  <div class="row-fluid">
+    <div class="span4 offset2" style="background-color: rgb(160, 160, 246);">
+      <p>this is a container class with a row in, holding a span 4 and offset by 2</p>
+    </div>
+    <div class="span4 offset2" style="background-color: rgb(132, 247, 132);">
+      <p>this is a container class with a row in, holding a span 4 and offset by 2</p>
+    </div>
+  </div>
+</div>
+<br/><br/>
+
+<pre>
+&lt;div class="container"&gt;
+  &lt;div class="row-fluid"&gt;
+    &lt;div class="span4 offset2" style="background-color: rgb(160, 160, 246);"&gt;
+      &lt;p&gt;this is a container class with a row in, holding a span 4 and offset by 2&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="span4 offset2" style="background-color: rgb(132, 247, 132);"&gt;
+      &lt;p&gt;this is a container class with a row in, holding a span 4 and offset by 2&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+@section UserCss
+{
+  <style>
+    .container
+    {
+      background-color: #ffbbbb;
+    }
+  </style>
+}
