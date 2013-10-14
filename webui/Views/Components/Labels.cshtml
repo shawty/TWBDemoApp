@@ -8,11 +8,11 @@
 
 <p>
   Labels and badges are as you would expect the description to be.  These are small coloured text based icons that are used for things like comment counts and
-  blog post tags.
+  blog post tags. you create a label by using a class of <code>label</code> and a badge by using a class of <code>badge</code>
 </p>
 
 <p>
-  Like most of Twitter Bootstrap, they follow the same key 4 colour scheme and have thier colours set appropriately, they are also style using the 
+  Like most of Twitter Bootstrap, they follow the same key 4 colour scheme and have thier colours set appropriately, they are also styled using the 
   CSS3 <code>:empty</code> pesudo selector, which means when thier empty and have no content they'll automatically disapear from your display, the standard 
   label types are as follows:
 </p>
@@ -22,13 +22,17 @@
 </p>
 
 <ul class="unstyled">
-  <li><span class="label">Default</span></li>
-  <li><span class="label label-success">Success</span></li>
-  <li><span class="label label-warning">Warning</span></li>
-  <li><span class="label label-important">Important</span></li>
-  <li><span class="label label-info">Info</span></li>
-  <li><span class="label label-inverse">Inverse</span></li>
+  <li><span class="label" id="lab1">Default</span></li>
+  <li><span class="label label-success" id="lab2">Success</span></li>
+  <li><span class="label label-warning" id="lab3">Warning</span></li>
+  <li><span class="label label-important" id="lab4">Important</span></li>
+  <li><span class="label label-info" id="lab5">Info</span></li>
+  <li><span class="label label-inverse" id="lab6">Inverse</span></li>
 </ul>
+
+<br/>
+<button class="btn" id="btnEmpty">Empty the labels</button>&nbsp;<button class="btn" id="btnPut">Put text in the labels</button>
+<br/><br/>
 
 <pre>
 &lt;ul class="unstyled"&gt;
@@ -43,7 +47,7 @@
 
 <p>
   As you can see you have the standard <code>info</code> , <code>success</code> , <code>warning</code> classes for the labels, but in a slight departure from the norm the class for the red colour is actually <code>important</code> and not
-  error as you might expect.  This might seem like a little but of a departure from bein intuitive, but when you think about it, it does make sense as labels are designed to warn you, and not chastise you , unlike a button which might 
+  error as you might expect.  This might seem like a little but of a departure from being intuitive, but when you think about it, it does make sense as labels are designed to warn you, and not chastise you , unlike a button which might 
   for example be trying to prevent you from committing an action.  Labels are designed to notify you of the severity of the action.
 </p>
 
@@ -70,3 +74,30 @@
     &lt;li&gt;&lt;span class="badge badge-inverse"&gt;10&lt;/span&gt;&lt;/li&gt; 
   &lt;/ul&gt;
 </pre>
+
+@section UserScripts
+{
+  <script>
+
+    $('#btnEmpty').on('click', function ()
+    {
+      $('#lab1').text('');
+      $('#lab2').text('');
+      $('#lab3').text('');
+      $('#lab4').text('');
+      $('#lab5').text('');
+      $('#lab6').text('');
+    });
+
+    $('#btnPut').on('click', function ()
+    {
+      $('#lab1').text('Default');
+      $('#lab2').text('Success');
+      $('#lab3').text('Warning');
+      $('#lab4').text('Important');
+      $('#lab5').text('Info');
+      $('#lab6').text('Inverse');
+    });
+    
+  </script>
+}

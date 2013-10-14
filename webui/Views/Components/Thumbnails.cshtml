@@ -1,0 +1,287 @@
+﻿@{
+    ViewBag.Title = "Bootstrap Sample Site | Thumbnails and Media Objects";
+}
+
+<div class="page-header">
+  <h1>Components <small>Thumbnails and Media Objects</small></h1>
+</div>
+
+<p>
+  Beacuse of the responsive nature of Twitter bootstrap, and it's very nice flexible grid systems, the authors thought it would be good to add a thumbnail system that worked well with 
+  the scaffolding system to allow you to layout grids of images very very easily.  You create a thumbnail set by creating a normal &lt;ul&gt; list element, then assigning the class <code>thumbnails</code> to 
+  it.  The thumbnails themselves are normal anchor tags with the thumbnail image placed in side of them, and a class of <code>thumbnail</code> given to the &lt;a&gt; element.
+</p>
+
+<ul class="thumbnails">
+  <li>
+    <a href="#" class="thumbnail">
+      <img src="@Url.Content("~/Images/cats1.jpg")" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#" class="thumbnail">
+      <img src="@Url.Content("~/Images/cats2.jpg")" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#" class="thumbnail">
+      <img src="@Url.Content("~/Images/cats3.jpg")" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#" class="thumbnail">
+      <img src="@Url.Content("~/Images/cats4.jpg")" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#" class="thumbnail">
+      <img src="@Url.Content("~/Images/cats5.jpg")" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#" class="thumbnail">
+      <img src="@Url.Content("~/Images/cats6.jpg")" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#" class="thumbnail">
+      <img src="@Url.Content("~/Images/cats7.jpg")" alt="">
+    </a>
+  </li>
+  <li>
+    <a href="#" class="thumbnail">
+      <img src="@Url.Content("~/Images/cats8.jpg")" alt="">
+    </a>
+  </li>
+</ul>
+
+<pre>
+&lt;ul class="thumbnails"&gt;
+  &lt;li&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="@Url.Content("~/Images/cats1.jpg")" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="@Url.Content("~/Images/cats2.jpg")" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="@Url.Content("~/Images/cats3.jpg")" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="@Url.Content("~/Images/cats4.jpg")" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="@Url.Content("~/Images/cats5.jpg")" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="@Url.Content("~/Images/cats6.jpg")" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="@Url.Content("~/Images/cats7.jpg")" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;a href="#" class="thumbnail"&gt;
+      &lt;img src="@Url.Content("~/Images/cats8.jpg")" alt=""&gt;
+    &lt;/a&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<p>
+  With a little bit extra, and individual <code>thumbnail</code> classes on div's inside the parent thumbnails container, thumbnail containers are flexible enough to contain many different kinds of markup.
+</p>
+
+<ul class="thumbnails">
+  <li class="span4">
+    <div class="thumbnail">
+      <img src="@Url.Content("~/Images/flash_drive.jpg")" alt="">
+      <h3>Ancient Flash Drive</h3>
+      <p>A stone age flash drive was found today by workmen digging out an old tar pit next to the new super duper fast motorway being built.  A Person, chief archieologist at the site said "This is 
+        as extremely exciting find, we now know for sure that internet is way older than we first thought", it's thought the data on the device if retrievable might actually be older than 5 years.</p>
+      <p><a href="#" class="btn btn-primary">Read More</a> <a href="#" class="btn">Archive</a></p>
+    </div>
+  </li>
+  <li class="span4">
+    <div class="thumbnail">
+      <img src="@Url.Content("~/Images/how_users_see_developers.jpg")" alt="">
+      <h3>How users see developers</h3>
+      <p>Fresh research has been done on how users see developers.  Government scientists have fianlly come to the conclusion that most are percived as aliens.  This came as no 
+        surprise to most developers, as a previous round of research showed that most users where unable to grasp even simple concepts when it comes to computing.</p>
+      <p><a href="#" class="btn btn-primary">Read More</a> <a href="#" class="btn">Archive</a></p>
+    </div>
+  </li>
+  <li class="span4">
+    <div class="thumbnail">
+      <img src="@Url.Content("~/Images/nsa_drive.jpg")" alt="">
+      <h3>Nsa Refuse to help</h3>
+      <p>Mrs jones of lincon was distraught today when the hard drive containing her entire knitting patterns collection crashed.  She quickly contacted the NSA in america knowing for 
+        sure that they would have a backup of her data, but was extremely shocked when told she would not be provided with a backup copy.</p>
+      <p><a href="#" class="btn btn-primary">Read More</a> <a href="#" class="btn">Archive</a></p>
+    </div>
+  </li>
+</ul>
+
+<pre>
+&lt;ul class="thumbnails"&gt;
+  &lt;li class="span4"&gt;
+    &lt;div class="thumbnail"&gt;
+      &lt;img src="@Url.Content("~/Images/flash_drive.jpg")" alt=""&gt;
+      &lt;h3&gt;Ancient Flash Drive&lt;/h3&gt;
+      &lt;p&gt;A stone age flash drive was found today by workmen digging out an old tar pit next to the new super duper fast motorway being built.  A Person, cheif archieologist at the site said "This is 
+      as extremely exciting find, we now know for sure that internet is way older than we first thought", it's thought the data on the device if retrievable might actually be older than 5 years.&lt;/p&gt;
+      &lt;p&gt;&lt;a href="#" class="btn btn-primary"&gt;Read More&lt;/a&gt; &lt;a href="#" class="btn"&gt;Archive&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class="span4"&gt;
+    &lt;div class="thumbnail"&gt;
+      &lt;img src="@Url.Content("~/Images/how_users_see_developers.jpg")" alt=""&gt;
+      &lt;h3&gt;How users see developers&lt;/h3&gt;
+      &lt;p&gt;Fresh research has been done on how users see developers.  Government scientists have fianlly come to the conclusion that most are percived as aliens.  This came as no 
+      surprise to most developers, as a previous round of research showed that most users where unable to grasp even simple concepts when it comes to computing.&lt;/p&gt;
+      &lt;p&gt;&lt;a href="#" class="btn btn-primary"&gt;Read More&lt;/a&gt; &lt;a href="#" class="btn"&gt;Archive&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class="span4"&gt;
+    &lt;div class="thumbnail"&gt;
+      &lt;img src="@Url.Content("~/Images/nsa_drive.jpg")" alt=""&gt;
+      &lt;h3&gt;Nsa Refuse to help&lt;/h3&gt;
+      &lt;p&gt;Mrs jones of lincon was distraught today when the hard drive containing her entire knitting patterns collection crashed.  She quickly contacted the NSA in america knowing for 
+      sure that they would have a backup of her data, but was extremely shocked when told she would not be provided with a backup copy.&lt;/p&gt;
+      &lt;p&gt;&lt;a href="#" class="btn btn-primary"&gt;Read More&lt;/a&gt; &lt;a href="#" class="btn"&gt;Archive&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<p>
+  A close cousin of the thumbnail classes, is the media object.  The media object is designed to allow you to quickly and easily layout lists of information, preceeded with 
+  a small image or thumbnail, it's use was primarily for displaying lists of tweets.
+</p>
+
+<div class="media">
+  <a class="pull-left" href="#">
+    <img class="media-object" src="@Url.Content("~/Images/Female-icon.png")" alt="">
+  </a>
+  <div class="media-body">
+    <h4 class="media-heading">Jenny Bloggs</h4>
+    <p>Please use media objects to lay out lists of messages, they look really nice and proffessional.</p>
+  </div>
+</div>
+<br/>
+
+<pre>
+&lt;div class="media"&gt;
+  &lt;a class="pull-left" href="#"&gt;
+    &lt;img class="media-object" src="@Url.Content("~/Images/Female-icon.png")" alt=""&gt;
+  &lt;/a&gt;
+  &lt;div class="media-body"&gt;
+    &lt;h4 class="media-heading"&gt;Jenny Bloggs&lt;/h4&gt;
+    &lt;p&gt;Please use media objects to lay out lists of messages, they look really nice and proffessional.&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+<p>
+  To create a media object, use an outer most &lt;div&gt; with a class of <code>media</code> assigned to it. Then add an image with a class of <code>media-object</code> optionally 
+  wrapping it in a regular &lt;a&gt; element that has the alignment class of <code>pull-left</code> asigned, so that the image is both clickable and floated left.  The body of the media object 
+  should be placed in an inner &lt;div&gt; element which has a class of <code>media-body</code> assigned to it.
+</p>
+
+<p>
+  Going one step further, and using individual &lt;li&gt; elements for the thumbnails rather than a &lt;div&gt;, we can then create a &lt;ul&gt; and add the <code>media-list</code> class 
+  to it, allowing us to build up full lists of media objects.
+</p>
+
+<ul class="media-list">
+  <li class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" src="@Url.Content("~/Images/Manager-icon.png")" alt="">
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">Manager</h4>
+      <p>The manager is responsible for managing all managable assets accross all areas of the application.</p>
+    </div>
+  </li>
+  <li class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" src="@Url.Content("~/Images/Superman-icon.png")" alt="">
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">Super User</h4>
+      <p>The super-user is responsible for everything accross all areas of the application.</p>
+    </div>
+  </li>
+  <li class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" src="@Url.Content("~/Images/Security-icon.png")" alt="">
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">Securty User</h4>
+      <p>The security user is responsible for securing all securable assets accross all areas of the application.</p>
+    </div>
+  </li>
+  <li class="media">
+    <a class="pull-left" href="#">
+      <img class="media-object" src="@Url.Content("~/Images/Supervisor-icon.png")" alt="">
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">Supervisor</h4>
+      <p>The supervisor is responsible for supervising all supervisable assets accross all areas of the application.</p>
+    </div>
+  </li>
+</ul>
+
+<pre>
+&lt;ul class="media-list"&gt;
+  &lt;li class="media"&gt;
+    &lt;a class="pull-left" href="#"&gt;
+      &lt;img class="media-object" src="@Url.Content("~/Images/Manager-icon.png")" alt=""&gt;
+    &lt;/a&gt;
+    &lt;div class="media-body"&gt;
+      &lt;h4 class="media-heading"&gt;Manager&lt;/h4&gt;
+      &lt;p&gt;The manager is responsible for managing all managable assets accross all areas of the application.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class="media"&gt;
+    &lt;a class="pull-left" href="#"&gt;
+      &lt;img class="media-object" src="@Url.Content("~/Images/Superman-icon.png")" alt=""&gt;
+    &lt;/a&gt;
+    &lt;div class="media-body"&gt;
+      &lt;h4 class="media-heading"&gt;Super User&lt;/h4&gt;
+      &lt;p&gt;The super-user is responsible for everything accross all areas of the application.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class="media"&gt;
+    &lt;a class="pull-left" href="#"&gt;
+      &lt;img class="media-object" src="@Url.Content("~/Images/Security-icon.png")" alt=""&gt;
+    &lt;/a&gt;
+    &lt;div class="media-body"&gt;
+      &lt;h4 class="media-heading"&gt;Securty User&lt;/h4&gt;
+      &lt;p&gt;The security user is responsible for securing all securable assets accross all areas of the application.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+  &lt;li class="media"&gt;
+    &lt;a class="pull-left" href="#"&gt;
+      &lt;img class="media-object" src="@Url.Content("~/Images/Supervisor-icon.png")" alt=""&gt;
+    &lt;/a&gt;
+    &lt;div class="media-body"&gt;
+      &lt;h4 class="media-heading"&gt;Supervisor&lt;/h4&gt;
+      &lt;p&gt;The supervisor is responsible for supervising all supervisable assets accross all areas of the application.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
